@@ -28,13 +28,13 @@ public class Reservation {
     @Column(nullable = false, length = 20)
     private StatutReservation statut;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Vehicule vehicule;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Client client;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     private Contrat contrat;
 
 }

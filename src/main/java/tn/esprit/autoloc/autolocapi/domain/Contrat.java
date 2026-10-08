@@ -31,7 +31,7 @@ public class Contrat {
     @Column(nullable = false)
     private boolean valide;
 
-    @OneToOne(mappedBy = "contrat")
+    @OneToOne(mappedBy = "contrat",fetch = FetchType.LAZY)
     private Reservation reservation;
 
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "contrat")
